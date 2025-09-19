@@ -24,7 +24,7 @@ public class AcceptorState {
     }
 
     public synchronized boolean accept(int proposalId, String proposalValue) {
-        if (proposalId > highestPromiseId) {
+        if (proposalId >= highestPromiseId) {
             highestPromiseId = proposalId;
             acceptedId = proposalId;
             acceptedValue = proposalValue;

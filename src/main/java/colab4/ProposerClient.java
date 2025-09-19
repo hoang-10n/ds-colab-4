@@ -43,7 +43,8 @@ public class ProposerClient {
             }
         }
 
-        if (promises < (acceptorPorts.length / 2 + 1)) {
+        int limit = acceptorPorts.length / 2 + 1;
+        if (promises < limit) {
             System.out.println("Not enough promises. Proposal failed.");
             return;
         }
