@@ -14,5 +14,8 @@ run-servers:
 	java -cp ./target/classes:./lib/* colab4.AcceptorServer 9004 &
 	java -cp ./target/classes:./lib/* colab4.AcceptorServer 9005 &
 
+run-demo:
+	java -cp ./target/classes:./lib/* colab4.Demo 
+
 kill:
 	@pkill -f '$(SERVERS)' || true
